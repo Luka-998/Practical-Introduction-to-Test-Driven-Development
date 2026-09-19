@@ -17,8 +17,8 @@ class Sample():
 
     @volume.setter
     def volume(self,amount):
-        if self.amount <= 0:
-            raise ValueError('Volume must be > 0!')
+        if amount<= 0:
+            raise ValueError('Volume increase must be > 0!')
         self._volume = amount
 
     def update_status(self,new_status):
@@ -32,7 +32,7 @@ class Sample():
             self.current_status = new_status
 
     def use_volume(self,amount_ml):
-        if self._volume -amount_ml >0:
+        if self._volume -amount_ml >=0:
             self._volume -=amount_ml
             return self._volume
         else:
@@ -41,13 +41,47 @@ class Sample():
 
 
 class DNASample(Sample):
-    def __init__(self,sample_id,concetration,status):
-        super().__init__(sample_id,status)
-        update_status = super().update_status()
+    def __init__(self,sample_id,volume_ml,concentration,status,type_dna):
+        super().__init__(sample_id,volume_ml,status)
+        self.concetration = concentration
+        self.type_dna = type_dna
+    def __repr__(self):
+        return f"Dna sample: {self.sample_id}, volume_ml: {self._volume} concetration : {self.concetration} , status: {self.current_status} and type: {self.type_dna}"
+
+class RNASample(Sample):
+    def __init__(self,sample_id,volume_ml,concetration,status,integrity_score):
+        super().__init__(sample_id,volume_ml,status)
         self.concetration = concetration
-        assert self.concetration > 0, "Concetration must be > 0!"
+        self.integrity_score = integrity_score
 
+    def __repr__(self):
+        return f"RNA sample_id {self.sample_id}, volume: {self._volume}, concetration : {self.concetration} and ig score: {self.integrity_score}"
 
+    @property
+    def integrity_score(self):
+        return self._integrity_score
+    
+
+    @integrity_score.setter
+    def integrity_score(self,score):
+        if 0<=score<=10 and isinstance(score,float):
+            self._integrity_score = score
+        else:
+            raise ValueError("Score must be float type between 0-10!")
+    def is_degraded(self):
+        if self._integrity_score < 4:
+            return True
+        else:
+            return False
 sample1=Sample(1,12.2,'collected')
 print(sample1)
-dna1 = DNASample(2,14.2,'supported')
+print(sample1.volume)
+sample1.volume = 2
+print(sample1.volume)
+dna1 = DNASample(2,14.2,24,'collected','human')
+dna1.update_status('processing')
+print(dna1)
+
+rna1 = RNASample(1,2.2,99.1,"collected",2.0)
+print(rna1)
+print(rna1.is_degraded())
