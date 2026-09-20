@@ -30,6 +30,7 @@ class Sample():
             return self.current_status
         else:
             self.current_status = new_status
+            return self.current_status
 
     def use_volume(self,amount_ml):
         if self._volume -amount_ml >=0:
@@ -73,15 +74,9 @@ class RNASample(Sample):
             return True
         else:
             return False
-sample1=Sample(1,12.2,'collected')
-print(sample1)
-print(sample1.volume)
-sample1.volume = 2
-print(sample1.volume)
-dna1 = DNASample(2,14.2,24,'collected','human')
-dna1.update_status('processing')
-print(dna1)
 
-rna1 = RNASample(1,2.2,99.1,"collected",2.0)
-print(rna1)
-print(rna1.is_degraded())
+if __name__=='__main__':
+    sample1=Sample(1,12.2,'collected')
+    dna1 = DNASample(2,14.2,24,'collected','human')
+    rna1 = RNASample(1,2.2,99.1,"collected",2.0)
+
