@@ -6,6 +6,10 @@ class Sample():
         self.current_status = status
         self.possible_status = ['collected','archived','processing','discarded']
 
+        if self._volume <= 0:
+            raise ValueError
+
+
         if self.current_status not in self.possible_status:
             raise ValueError(f"{self.current_status} not in possible status!")
 
@@ -17,6 +21,8 @@ class Sample():
 
     @volume.setter
     def volume(self,amount):
+        #if self._volume < 0: # already passed validation in __init__
+            #raise ValueError
         if amount<= 0:
             raise ValueError('Volume increase must be > 0!')
         self._volume = amount
@@ -25,7 +31,7 @@ class Sample():
         if new_status not in self.possible_status:
             raise ValueError(f"{new_status} not in {self.possible_status}!")
         elif self.current_status in ['archived','discarded']:
-            raise ValueError(f"Can't change status of item when the item is :{self.current_status}")
+            raise ValueError(f"Can't change status of item when the item is:{self.current_status}")
         elif new_status == self.current_status:
             return self.current_status
         else:
@@ -65,10 +71,13 @@ class RNASample(Sample):
 
     @integrity_score.setter
     def integrity_score(self,score):
-        if 0<=score<=10 and isinstance(score,float):
-            self._integrity_score = score
+        if not isinstance(score,float):
+            raise TypeError
+        elif not 0<=score<=10:
+            raise ValueError
         else:
-            raise ValueError("Score must be float type between 0-10!")
+            self._integrity_score =score
+            return self._integrity_score 
     def is_degraded(self):
         if self._integrity_score < 4:
             return True
@@ -76,7 +85,7 @@ class RNASample(Sample):
             return False
 
 if __name__=='__main__':
-    sample1=Sample(1,12.2,'collected')
+    sample1=Sample(1,1,'collected')
     dna1 = DNASample(2,14.2,24,'collected','human')
     rna1 = RNASample(1,2.2,99.1,"collected",2.0)
 
