@@ -1,5 +1,6 @@
 FROM python:3.12-slim
-WORKDIR /.
-COPY LabSampleTracking.py .
+WORKDIR /app
+COPY  requirements.txt .
 RUN pip install -r requirements.txt
-CMD ['python','dockerTestHello.python']
+COPY dockerTestHello.py .
+CMD ["python","dockerTestHello.py"]
