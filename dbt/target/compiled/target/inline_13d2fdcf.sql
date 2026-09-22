@@ -1,1 +1,0 @@
-select * from main_raw.raw_flow_b_runs limit 10

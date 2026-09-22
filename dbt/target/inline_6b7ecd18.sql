@@ -1,1 +1,0 @@
-select execution_id, COUNT(*) as event_count from main_raw.raw_kafka_events GROUP BY execution_id ORDER BY execution_id

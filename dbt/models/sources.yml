@@ -1,9 +1,0 @@
-version: 2
-
-sources:
-  - name: raw_monitoring
-    schema: raw
-    tables:
-      - name: raw_pipeline_a_runs
-      - name: raw_flow_b_runs
-      - name: raw_kafka_events

@@ -1,1 +1,0 @@
-select event_type as status, event_ts as started, event_type LIKE %_FINISHED% from main_raw.raw_kafka_events

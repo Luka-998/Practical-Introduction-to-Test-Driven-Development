@@ -1,1 +1,0 @@
-select * from main_raw.raw_pipeline_b_runs

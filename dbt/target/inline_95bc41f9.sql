@@ -1,1 +1,0 @@
-select COUNT(*) as rows, COUNT(DISTINCT evnet_id) as unique_events, COUNT(DISTINCT execution_id) as pipeline_runs from main_raw.raw_kafka_evnets group by unique_events

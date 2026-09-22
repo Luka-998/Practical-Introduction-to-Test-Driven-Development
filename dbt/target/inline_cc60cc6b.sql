@@ -1,1 +1,0 @@
-select event_id, COUNT(*) from main_raw.raw_kafka_events HAVING COUNT(*) > 1
