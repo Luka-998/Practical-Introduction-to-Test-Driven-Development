@@ -1,0 +1,1 @@
+select event_id  as ID from main_raw.raw_kafka_events

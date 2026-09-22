@@ -1,0 +1,7 @@
+pipeline_monitoring:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: monitoring.duckdb
+      threads: 4

@@ -1,0 +1,2 @@
+select * from raw.raw_pipeline_a_runs
+:

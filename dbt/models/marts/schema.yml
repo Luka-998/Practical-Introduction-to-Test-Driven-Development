@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: fct_pipeline_monitoring
+    description: "Canonical monitoring mart. One row per pipeline run."
+    columns:
+      # TODO: add generic dbt data tests.
+      #
+      # Minimum business expectations:
+      # - run_id must never be NULL
+      # - run_id must be unique in the final mart
+      # - pipeline_name must never be NULL
+      # - status must be one of RUNNING, DONE, FAILED
+      # - started_at must never be NULL
+      #
+      # Add tests yourself rather than copying a finished answer.
+      - name: run_id
+      - name: pipeline_name
+      - name: source_system
+      - name: status
+      - name: started_at
+      - name: finished_at
+      - name: duration_seconds
+      - name: sample_id
+      - name: error_message
+      - name: compute_cost
+      - name: records_processed
+      - name: environment
+      - name: is_success
