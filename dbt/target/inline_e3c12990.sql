@@ -1,1 +1,0 @@
-select event_id, COUNT(*) from main_raw.raw_kafka_events GROUP BY event_id;
