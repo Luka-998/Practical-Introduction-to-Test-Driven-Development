@@ -12,4 +12,3 @@ def calculate_duration(start,end):
 
 if __name__ == '__main__':
     z = calculate_duration(112,112)
-    print(z)
