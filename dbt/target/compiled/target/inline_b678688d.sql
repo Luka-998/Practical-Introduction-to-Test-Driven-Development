@@ -1,0 +1,1 @@
+WITH finished_at AS ( SELECT execution_id,events_ts FROM main_raw.raw_kafka_events GROUP BY execution_id WHERE event_type LIKE '%FINISHED%' or event_type LIKE '%FAILED%'

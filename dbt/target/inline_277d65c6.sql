@@ -1,0 +1,1 @@
+SELECT COUNT(execution_uuid) AS total_rows, execution_uuid FROM main_raw.raw_pipeline_a_runs GROUP BY execution_uuid

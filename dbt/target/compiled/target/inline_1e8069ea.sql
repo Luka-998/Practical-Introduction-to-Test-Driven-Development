@@ -1,0 +1,1 @@
+WITH normalized_state AS ( CASE WHEN state = 'SUCCEEDED' then 'FINISHED' END) SELECT * FROM normalized_state

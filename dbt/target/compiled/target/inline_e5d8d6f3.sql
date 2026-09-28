@@ -1,0 +1,1 @@
+SELECT DISTINCT(event_type) FROM main_raw.raw_kafka_events

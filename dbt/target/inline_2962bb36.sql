@@ -1,0 +1,1 @@
+SELECT * FROM models\staging\stg_pipeline_runs.sql

@@ -1,0 +1,1 @@
+SELECT DISTINCT(execution_id) FROM main_raw.raw_kafka_events GROUP BY event_id

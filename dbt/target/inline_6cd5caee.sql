@@ -1,0 +1,1 @@
+SELECT execution_id,MAX( CASE WHEN event_type = 'PIPELINE_FAILED' THEN 1 ELSE 0 END AS has_failed , MAX (CASE WHEN event_type = 'PIPELINE_FINISHED' THEN 1 ELSE 0 END AS has_finished FROM main_raw.raw_kafka_events

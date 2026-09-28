@@ -1,0 +1,20 @@
+{
+  "target_dir": "C:\\Users\\lepar\\Desktop\\luka\\Practical Introduction to Test-Driven Development\\dbt\\target",
+  "fingerprints": {
+    "run_results.json": {
+      "size": 338,
+      "modified_secs": 1790247893
+    },
+    "manifest.json": {
+      "size": 525050,
+      "modified_secs": 1790247893
+    },
+    "semantic_manifest.json": {
+      "size": 234,
+      "modified_secs": 1790247893
+    }
+  },
+  "write_source": "DirectWrite",
+  "context_dir": null,
+  "context_fingerprints": {}
+}

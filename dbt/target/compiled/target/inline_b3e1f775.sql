@@ -1,0 +1,1 @@
+SELECT SUM( CASE WHEN execution_uuid IS NULL THEN 1 ELSE 0 END) FROM main_raw.raw_pipeline_a_runs

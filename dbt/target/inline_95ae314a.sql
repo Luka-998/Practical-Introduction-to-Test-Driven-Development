@@ -1,0 +1,1 @@
+WITH finished_at AS ( SELECT COALESCE(DISTINCT(execution_id),NULL), event_ts FROM main_raw.raw_kafka_events WHERE event_type IN ('PIPELINE_FINISHED','PIPELINE_FAILED')

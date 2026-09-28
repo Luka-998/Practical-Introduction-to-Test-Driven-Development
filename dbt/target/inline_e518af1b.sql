@@ -1,0 +1,1 @@
+WITH finished_at AS ( SELECT execution_id, ( CASE WHEN event_type IN ('PIPELINE_FINISHED','PIPELINE_FAILED') FROM main_raw.raw_kafka_events), SELECT * FROM finished_at GROUP BY execution_id

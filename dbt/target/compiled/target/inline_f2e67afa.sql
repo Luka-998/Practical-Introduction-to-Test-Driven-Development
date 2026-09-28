@@ -1,0 +1,1 @@
+SELECT DISTINCT(execution_id) WITH started_at AS (SELECT CASE WHEN event_id LIKE '%STARTED%') END AS started_at

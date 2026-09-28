@@ -1,0 +1,1 @@
+SELECT execution_uuid, (CASE WHEN state = 'COMPLETED' THEN SET state = 'FINISHED' END ) as state FROM main_raw.raw_pipeline_a_runs

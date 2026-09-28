@@ -1,0 +1,1 @@
+SELECT * FROM main_raw.kafka_raw_events

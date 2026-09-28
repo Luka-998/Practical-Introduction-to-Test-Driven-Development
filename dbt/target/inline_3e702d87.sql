@@ -1,0 +1,1 @@
+SELECT DISTINCT(env) FROM main_raw.raw_pipeline_a_runs

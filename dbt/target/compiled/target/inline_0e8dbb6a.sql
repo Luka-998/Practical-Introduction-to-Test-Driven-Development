@@ -1,0 +1,1 @@
+SELECT * FROM main_raw.stg_pipeline_a_runs

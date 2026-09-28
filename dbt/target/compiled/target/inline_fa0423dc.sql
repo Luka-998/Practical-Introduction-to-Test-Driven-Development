@@ -1,0 +1,1 @@
+WITH normalized_state AS ( CASE WHEN state = 'SUCCEEDED' then 'FINISHED' END FROM main_raw.raw_pipeline_a_runs) SELECT * FROM normalized_state

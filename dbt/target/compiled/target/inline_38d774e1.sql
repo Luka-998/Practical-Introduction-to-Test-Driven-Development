@@ -1,0 +1,1 @@
+SELECT * FROM main_raw.pipeline_a_runs

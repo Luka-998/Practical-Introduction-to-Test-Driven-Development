@@ -1,0 +1,1 @@
+SELECT execution_id,event_type FROM main_raw.raw_kafka_events

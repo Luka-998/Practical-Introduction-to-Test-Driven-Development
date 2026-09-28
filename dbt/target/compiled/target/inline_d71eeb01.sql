@@ -1,0 +1,1 @@
+SELECT event_ID FROM main_raw.raw_kafka_events WHERE event_type LIKE '%RUNNING%'

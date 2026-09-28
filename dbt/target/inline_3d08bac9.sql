@@ -1,0 +1,1 @@
+SELECT execution_uuid, ( CASE WHEN state = 'SUCCEEDED' or state = 'COMPLETED' then 'DONE' ELSE state END) AS normalized_state FROM main_raw.raw_pipeline_a_runs

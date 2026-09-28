@@ -1,0 +1,1 @@
+SELECT DISTINCT(state) FROM main_raw.raw_pipeline_a_runs

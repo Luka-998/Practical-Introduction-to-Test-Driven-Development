@@ -1,0 +1,1 @@
+SELECT execution_id, COUNT(*) FROM main_raw.raw_kafka_events HAVING COUNT > 1

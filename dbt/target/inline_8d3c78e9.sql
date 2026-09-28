@@ -1,0 +1,1 @@
+SELECT execution_id, COUNT(*) FROM main_raw.raw_kafka_events GROUP BY execution_id

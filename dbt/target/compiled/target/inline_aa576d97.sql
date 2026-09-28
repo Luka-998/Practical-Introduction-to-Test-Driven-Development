@@ -1,0 +1,1 @@
+SELECT DISTINCT(flow_id)  FROM main_raw.raw_flow_b_runs

@@ -1,0 +1,1 @@
+WITH started_at AS ( SELECT DISTINCT(execution_id), event_type,event_ts FROM main_raw.raw_kafka_events GROUP BY event_type) SELECT event_type FROM started_at WHERE event_type LIKE '%STARTED'

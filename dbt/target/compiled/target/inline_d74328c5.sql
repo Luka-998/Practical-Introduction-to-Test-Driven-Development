@@ -1,0 +1,1 @@
+SELECT COUNT(*) AS total_rows, COUNT(DISTINCT(execution_uuid)) AS unique_execution_ids, SUM ( CASE WHEN execution_uuid IS NULL THEN 1 ELSE 0 END) AS null_execution_ids FROM main_raw.raw_pipeline_a_runs

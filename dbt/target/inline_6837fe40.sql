@@ -1,0 +1,1 @@
+SELECT sample_identifier,COUNT(*) FROM main_raw.raw_flow_b_runs GROUP BY flow_id

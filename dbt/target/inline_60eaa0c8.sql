@@ -1,0 +1,1 @@
+SELECT COUNT(execution_uuid) FROM main_raw.raw_pipeline_a_runs

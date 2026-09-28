@@ -1,0 +1,1 @@
+WITH started_at AS ( SELECT execution_id,event_ts FROM main_raw.raw_kafka_events WHERE event_type ='PIPELINE_STARTED') SELECT * FROM started_at
